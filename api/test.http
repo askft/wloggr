@@ -1,0 +1,86 @@
+
+# https://github.com/Huachao/vscode-restclient
+
+@url = http://127.0.0.1:3000
+@jwt = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzcyMTQ1MjMsImlhdCI6MTUzNzEyODEyMywiaXNzIjoid2xvZ2dyLmNvbSIsInN1YiI6IjUzODA2ZDY2LTM4MDktNGY3NC1hYzU1LWE5OWNlNGIxZDI1YiJ9.4k4ijaF15m_itceSoXviyfj6xgxmaKWGD3bytxVNJY0
+
+###
+
+POST {{url}}/api/user/signin
+Content-Type: application/json
+
+{"email": "a@a.a", "password": "asdqwe123"}
+
+###
+
+POST {{url}}/api/workout
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "exercises": [
+    {
+      "name": "deadlift",
+      "sets": [
+        { "reps": 1, "weight": 220 }
+      ]
+    }
+  ]
+}
+
+### 
+
+PUT {{url}}/api/workout/2018-09-17 03:34:06
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "exercises": [
+    {
+      "name": "ohp",
+      "sets": [
+        { "reps": 10, "weight": 60 },
+        { "reps": 8,  "weight": 70 }
+      ]
+    },
+    {
+      "name": "squat",
+      "sets": [
+        { "reps": 10, "weight": 100 },
+        { "reps": 20,  "weight": 120 }
+      ]
+    }
+  ]
+}
+
+###
+
+DELETE {{url}}/api/workout/2018-09-17 03:34:06
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+###
+
+PUT {{url}}/api/workout/2018-09-14 00:33:00/new
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "newDate": "2018-09-14 01:00:00"
+}
+
+###
+
+DELETE {{url}}/api/workout/2018-09-14 02:30:48
+Authorization: Bearer {{jwt}}
+
+
+###
+
+GET {{url}}/api/workout
+Authorization: Bearer {{jwt}}
+
+###
+
+GET {{url}}/api/workout/dates
+Authorization: Bearer {{jwt}}

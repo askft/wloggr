@@ -15,9 +15,9 @@ import (
 	"strings"
 	"time"
 
-	"wloggr/api/models"
-	"wloggr/api/store"
-	"wloggr/api/util"
+	"github.com/askft/wloggr/api/models"
+	"github.com/askft/wloggr/api/store"
+	"github.com/askft/wloggr/api/util"
 
 	validator "github.com/asaskevich/govalidator"
 	jwt "github.com/dgrijalva/jwt-go"

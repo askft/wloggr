@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"wloggr/api/models"
-	"wloggr/api/services"
-	"wloggr/api/store"
-	"wloggr/api/util"
+	"github.com/askft/wloggr/api/models"
+	"github.com/askft/wloggr/api/services"
+	"github.com/askft/wloggr/api/store"
+	"github.com/askft/wloggr/api/util"
 
 	"github.com/go-chi/chi"
 )

@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"wloggr/api/route"
+	"github.com/askft/wloggr/api/route"
 )
 
 func TestRouter(t *testing.T) {

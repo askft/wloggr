@@ -3,10 +3,10 @@ package route
 import (
 	"bytes"
 	"fmt"
+	"github.com/askft/wloggr/api/store"
 	"net/http"
 	"net/http/httptest"
 	"testing"
-	"wloggr/api/store"
 )
 
 func init() {

@@ -4,7 +4,7 @@ import (
 	_ "github.com/go-sql-driver/mysql" // SQLx uses this package.
 	"github.com/jmoiron/sqlx"
 
-	"wloggr/api/models"
+	"github.com/askft/wloggr/api/models"
 )
 
 // Store is a package-level reference to a database handle.

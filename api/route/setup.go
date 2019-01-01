@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"wloggr/api/util"
+	"github.com/askft/wloggr/api/util"
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"

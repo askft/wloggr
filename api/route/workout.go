@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"time"
 
-	"wloggr/api/store"
-	"wloggr/api/util"
+	"github.com/askft/wloggr/api/store"
+	"github.com/askft/wloggr/api/util"
 
 	"github.com/go-chi/chi"
 )

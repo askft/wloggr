@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"wloggr/api/models"
+	"github.com/askft/wloggr/api/models"
 )
 
 // CreateWorkout ...

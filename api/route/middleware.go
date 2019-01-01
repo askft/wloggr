@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	"wloggr/api/util"
+	"github.com/askft/wloggr/api/util"
 
 	"github.com/dgrijalva/jwt-go"
 	jwtreq "github.com/dgrijalva/jwt-go/request"

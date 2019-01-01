@@ -6,7 +6,7 @@ import (
 	"strings"
 	"unicode"
 
-	"wloggr/api/models"
+	"github.com/askft/wloggr/api/models"
 )
 
 // MockDB ...

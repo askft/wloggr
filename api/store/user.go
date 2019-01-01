@@ -1,7 +1,7 @@
 package store
 
 import (
-	"wloggr/api/models"
+	"github.com/askft/wloggr/api/models"
 )
 
 // NewUser ...

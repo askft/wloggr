@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"os"
 
-	"wloggr/api/route"
-	"wloggr/api/store"
-	"wloggr/api/util"
+	"github.com/askft/wloggr/api/route"
+	"github.com/askft/wloggr/api/store"
+	"github.com/askft/wloggr/api/util"
 )
 
 func main() {

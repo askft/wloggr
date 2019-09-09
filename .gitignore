@@ -17,7 +17,10 @@ node_modules
 # Other
 old_unused
 morenotes.txt
+nginx.conf
+wloggr.nginx.conf
 .DS_Store
+
 
 # Executables
 api/api

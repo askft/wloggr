@@ -1,0 +1,109 @@
+
+            --- TODO ---
+
+- Add ability to create template workouts / programs, and load them.
+- Save more state in store and don't reload more than necessary.
+- Refresh token.
+- Add ability to change exercise name and date.
+- If user is deleted from DB while logged in, one can
+  still acces sensitive data through because of the JWT.
+- Should every element anywhere have a unique id (e.g. shortid)?
+- Make editing better, maybe also set all editing
+  to false when any done is clicked.
+    - Done, but remove "editing" list (it's unnecessary)
+
+
+            --- DONE ---
+
+- Use onBlur to do api PUT calls.
+- Workouts and relate them to users.
+
+
+            --- GENERAL ---
+
+Go tutorials - where I'm at right now:
+    https://gobyexample.com/channel-synchronization
+    https://golangbot.com/buffered-channels-worker-pools/
+
+
+            --- API Design ---
+            (Might be out of date...)
+
+Method  URL (/api)          Description
+-------------------------------------------------
+POST    /workout            Create new workout.
+PUT     /workout/{date}     Update workout.
+DELETE  /workout/{date}     Delete workout.
+GET     /workout/{date}     Get workout.
+GET     /workout            Get all workouts.
+-------------------------------------------------
+POST    /signin             Authorize user.
+POST    /signup             Create new user.
+
+
+            --- OTHER ---
+
+Must fix the error described here:
+https://tylermcginnis.com/react-router-cannot-get-url-refresh/
+
+Program {Date, Type, Stats}
+    Workout {Date, Type, Stats}
+        Exercises {Type}
+            Sets <Rest time>
+                Reps, Weight
+
+
+An empty workout object looks like this:
+{
+    date: "",
+    stats: {}
+    exercises: [
+        {
+            name:"",
+            sets: [
+                { reps: 0, weight: 0}
+            ]
+        }
+    ]
+}
+
+An example of a Workout object:
+{
+    date: "2018-08-28",
+    stats: {
+        "bw": 80,
+    },
+    exercises: [
+        {
+            name: "ohp",
+            sets: [
+                { reps: 5, weight: 100 },
+                { reps: 5, weight: 100 },
+                { reps: 8, weight: 100 },
+            ]
+        },
+        {
+            name: "deadlift",
+            sets: [
+                {
+                    reps: 7, weight: 160
+                }
+            ]
+        }
+    ],
+}
+
+
+            --- INTERFACE USAGE ---
+
+type I interface {
+    f()
+}
+
+type A struct {}
+type B struct {}
+
+func (a *A) f() {}
+func (b *B) f() {}
+
+var i I
